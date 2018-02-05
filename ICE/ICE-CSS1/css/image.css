@@ -24,8 +24,7 @@ img {
   top:30%;
   left:0;
   transform: rotate(0deg);
-  transition: all 1s;
-
+  transition: transform 2s linear;
 }
 
 .hover:hover {
@@ -49,37 +48,27 @@ img {
 }
 
 .square:focus {
-  animation: xchange 4s linear;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
+  transform: translateX(2000px);
+  /* animation: xchange 4s linear alternate;
+  animation-iteration-count:2;
+  animation-fill-mode: forwards; */
 }
 
 .square:active{
   background: red;
   outline-color: green;
-  animation: spin 2s infinite linear;
-  animation-fill-mode: none;
+  transform: rotate(360deg);
+  /* animation: spin 2s infinite linear;
+  animation-fill-mode: both; */
 }
-
 
 
 @keyframes xchange {
   0%{
-    left:0;
+    transform: translateX(0);
   }
   100%{
-    left:100%;
-  }
-}
-
-@keyframes rotate {
-  0%{
-    left:0;
-    transform: rotate(20deg);
-  }
-  100%{
-    left:100%;
-    transform: rotate(90deg);
+    transform: translateX(2000px);
   }
 }
 
@@ -91,3 +80,16 @@ img {
     transform: rotate(360deg);
   }
 }
+
+/*
+@keyframes rotate {
+  0%{
+    left:0;
+    transform: rotate(20deg);
+  }
+  100%{
+    left:100%;
+    transform: rotate(90deg);
+  }
+}
+*/
