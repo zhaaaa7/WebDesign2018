@@ -23,7 +23,6 @@ img {
   position: absolute;
   top:30%;
   left:0;
-  transform: rotate(0deg);
   transition: transform 2s linear;
 }
 

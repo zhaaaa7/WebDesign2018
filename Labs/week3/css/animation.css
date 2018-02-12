@@ -1,0 +1,51 @@
+
+.shape{
+  margin: 36px;
+  float: left;
+  background: #1EB287; /*green*/
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  /*transition: background-color 1s ease,transform 1s linear;*/
+  animation: bounced 2s ease-in alternate infinite;
+}
+/* blue: #158BC5 */
+/* red: #D25E51 */
+img {
+  float: left;
+}
+/*.shape:hover{
+  background-color:blue;
+  transform: translate(10px,10px);
+}*/
+
+/*@keyframes bounce{
+  50%{
+    transform: rotate(90deg);
+  }
+
+  100%{
+    transform:translateY(200px);
+  }
+}*/
+
+@keyframes bounced {
+  80%{
+    transform: translateY(100px);
+    width:50px;
+    height:50px;
+  }
+  100%{
+    transform: translateY(110px);
+    width:50px;
+    height:45px;
+  }
+}
+
+a{
+  transition:color 1s ease;
+}
+
+a:hover{
+  color:red;
+}
